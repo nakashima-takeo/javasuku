@@ -1,0 +1,71 @@
+/* スタイルが継承される */
+@charset "utf-8";
+h1 { 
+      color: sandybrown;
+      font-size: xx-large;
+      text-align: center;
+      font-weight: 900;
+      text-decoration: underline;
+      font-family: メイリオ,"Airial Black" monospace;
+}
+header{
+      opacity: 0.6;
+}
+footer{
+   opacity: 0.3;
+}
+body{
+      font-family: メイリオ,"Airial Black" monospace;
+}
+main{
+      border: 1px solid;
+      font-size: 16px;
+      /* line-height: 48px; */
+      line-height: 2em;/*単位を抜いて指定すると継承したとき、継承先の文字幅のn倍の感覚になる。*/
+      background-color: aliceblue;
+}
+ul {
+   border: inherit;
+   list-style-type: none;
+   list-style-type: upper-latin;
+   list-style: upper-latin ;
+}
+img{
+   vertical-align: middle;
+}
+ol{
+   list-style-type: circle;
+   list-style-position: outside;
+   list-style-image: url(../img/夜空のフリーアイコン.jpeg);
+}
+.nazo_image{
+
+}
+
+.box0{
+   background-color: aliceblue;
+   width: 800px;
+   height: 600px;
+   border-width: 2px;
+   border-style: dotted;
+   border-color: olivedrab;
+   border-radius: 10px;
+   padding-top: 10px;
+   padding-left: 200px;
+   margin-right: auto;
+   margin-left: auto;
+   /* border: orangered 10px solid; */
+}
+.box00{
+   background-color: gold;
+   width: 50%;
+   height: 50%;
+   /* overflow: scroll; */
+   border-radius: 10px;
+   padding: 20px;
+   margin-right: auto;
+   margin-left: auto;
+}
+.box000{
+   background-color: blue;
+}
