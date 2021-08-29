@@ -47,12 +47,11 @@ ol{
    border-style: dotted;
    border-color: olivedrab;
    border-radius: 10px;
-   padding-top: 10px;
-   padding-left: 200px;
-   margin-right: auto;
-   margin-left: auto;
+   margin: 80px auto;
+   position: relative;
    /* border: orangered 10px solid; */
 }
+/* marginは相殺される（小さいほうのmarginが消される） */
 .box00{
    background-color: gold;
    width: 50%;
@@ -60,9 +59,82 @@ ol{
    /* overflow: scroll; */
    border-radius: 10px;
    padding: 20px;
-   margin-right: auto;
-   margin-left: auto;
+   /* margin-right: auto;
+   margin-left: auto; */
+   margin: 80px auto;
+   /* position: relative; */
+   position: absolute;
+   top: -5px;
+   left: 50px;
 }
 .box000{
-   background-color: blue;
+   background-color: teal;
+   display: inline-block;
+   margin: 10px 100px;
+   width: 300px;
+   height: 200px;
+   /* display: none; */
+   /* position: fixed; */
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   z-index: 2;
 }
+.box001{
+   background-color: sandybrown;
+   display: inline-block;
+   margin: 10px 100px;
+   width: 300px;
+   height: 200px;
+   /* display: none; */
+   /* position: fixed; */
+   position: absolute;
+   top: 50px;
+   left: 20px;
+   z-index: 3;
+}
+.box002{
+   background-color: blueviolet;
+   display: inline-block;
+   margin: 10px 100px;
+   width: 300px;
+   height: 200px;
+   /* display: none; */
+   /* position: fixed; */
+   position: absolute;
+   top: 30px;
+   left: 50px;
+   z-index: 1;
+}
+.box100{
+   background-color: blueviolet;
+   display: inline-block;
+   margin-bottom: 10px;
+   width: calc((100% - 40px) / 3);
+   height: 200px;
+   /* display: none; */
+   /* position: fixed; */
+   z-index: 1;
+   box-shadow: 5px 5px 3px blue;
+   /* text-shadow: 5px 5px 3px blue; */
+}
+.box101{
+   background-color: blueviolet;
+   display: inline-block;
+   /* margin-top: 10px; */
+   width: calc((100% - 40px) / 3);
+   height: 200px;
+   /* display: none; */
+   /* position: fixed; */
+   z-index: 1;
+   border-style: solid;
+   border-width: 10px;
+   border-color: sandybrown;
+   box-sizing: border-box;
+   background-image: url(../img/mountains-6544522_1920.jpg);
+   background-size: cover;
+   background-position: center;
+   /* background: center/cover url(../img/mountains-6544522_1920.jpg); */
+
+}
+/* float はめんどくさかった */
