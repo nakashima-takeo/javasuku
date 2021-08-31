@@ -167,3 +167,29 @@ header > h1::after{
    content: ' -';
 }
 
+.botton{
+   width: 100px;
+   background-color: bisque;
+   text-align: center;
+   padding: 4px;
+   color: black;
+   cursor: pointer;
+}
+/* 下のを疑似クラスという。要素の状態に応じてスタイリングできる。 */
+.botton:hover{
+   opacity: 0.8;
+}
+
+/* 順番に関する疑似クラスの練習を行う。 */
+header > :nth-child(3){
+   background-color: blueviolet;
+}
+header > :nth-child(even){
+   background-color: antiquewhite;
+}
+header > :last-child{
+   background-color: blue;
+}
+header > :nth-child(3n){
+   color: blue;
+}
