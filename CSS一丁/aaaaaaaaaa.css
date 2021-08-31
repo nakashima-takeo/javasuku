@@ -6,7 +6,7 @@ h1 {
       text-align: center;
       font-weight: 900;
       text-decoration: underline;
-      font-family: メイリオ,"Airial Black" monospace;
+      font-family: メイリオ,"Arial Black" monospace;
 }
 header{
       opacity: 0.6;
@@ -15,7 +15,7 @@ footer{
    opacity: 0.3;
 }
 body{
-      font-family: メイリオ,"Airial Black" monospace;
+      font-family: メイリオ,"Arial Black" monospace;
 }
 main{
       border: 1px solid;
@@ -137,4 +137,32 @@ ol{
    /* background: center/cover url(../img/mountains-6544522_1920.jpg); */
 
 }
-/* float はめんどくさかった */
+/* idセレクターは#によって行う。(idは固有。)*/
+/* 属性セレクターは[]によって行う。 */
+/* クラスセレクターは.kurasu の形で使われる */
+/* floatによって画像をインラインから独立して表示させることが出来る。 */
+
+#sakura_img{   
+     float: right;
+}
+.nazo_image{
+   clear: right;
+}
+/* 属性でセレクトできる。 */
+/* 属性セレクタの部分一致選択には^$*がそれぞれ使われ、
+   ([url^ = "https"]のような形で) 
+   それぞれ、前方一致、後方一致、部分一致である。*/
+/* 属性セレクタの組み合わせ。
+a, b : 単純に複数のセレクタを対象にしている。ex .nazo_image, h1 
+ab   : ex. h1.nazo_image のように、要素かつ属性という形で指定する。
+a > b: ex. body > h2 のように、a直下のbのみを一括で選択するときに使う。
+a b  : aの下にあるすべてのbが選択される。
+a + b: aの直後にあるbを選択したいときに使う。*/
+
+/* 疑似要素 */
+body h1::before{
+   content: '- ';
+}
+header > h1::after{
+   content: ' -';
+}
