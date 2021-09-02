@@ -1,12 +1,12 @@
 /* スタイルが継承される */
 @charset "utf-8";
 h1 { 
-      color: sandybrown;
+      color:blue;
       font-size: xx-large;
       text-align: center;
       font-weight: 900;
       text-decoration: underline;
-      font-family: メイリオ,"Arial Black" monospace;
+      font-family: メイリオ,"Arial Black", monospace;
 }
 header{
       opacity: 0.6;
@@ -15,7 +15,7 @@ footer{
    opacity: 0.3;
 }
 body{
-      font-family: メイリオ,"Arial Black" monospace;
+      font-family: メイリオ,"Arial Black", monospace;
 }
 main{
       border: 1px solid;
@@ -192,4 +192,12 @@ header > :last-child{
 }
 header > :nth-child(3n){
    color: blue;
+}
+
+header > p:nth-child(3n){
+   background-color:black;
+}
+
+header > h1:last-of-type{
+   background-image: url(../img/夜空のフリーアイコン.jpeg);
 }

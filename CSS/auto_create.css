@@ -1,0 +1,83 @@
+@charset "utf-8";
+li:not(:empty){
+   /* background-image: url(../img/icooon-mono/icon_111270_16.jpg); */
+   background-color: cornflowerblue;
+   display: list-item;
+   width: auto;
+   /* display: inline-block; */
+}
+
+/* セレクターの詳細度 id , class 属性 疑似クラス , 要素 疑似要素 の順に判定していく。*/
+/* 同伴程度の場合後に書いた方が優先される。 */
+/* 更に直接スタイル属性としてHTMLに書き込んだ方が優先される。 */
+/* 更に、CSS に !important を付けてあげると最優先される。ex) color: white !important; */
+
+.container{
+   width: 200px;
+   height: 1000px;
+   display: flex;  /* 直近の子要素のみがflex-itemになる。 */
+   flex-direction: row;
+   /* flex-wrap: wrap; */
+   align-content: flex-start;
+   /* justify-content: space-between; */
+   align-items: center;
+}
+
+.Bus{
+   width: 200px;
+   height: 200px;
+   flex-basis: 200px;
+   flex-grow: 1;
+   flex-shrink: 1;
+}
+#Kbus206{
+   width: 120px;
+   height: 50px;
+   background-color: blue;
+   order: 4;
+   /* flex-basis: 200px;
+   flex-grow: 1; */
+
+   flex: 1 1 100px;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 100px;
+
+   flex: initial; /*初期値*/
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+
+   flex: auto; /*初期値*/
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: auto;
+
+   flex: none; /*初期値*/
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: auto;
+
+   flex: 1; /*初期値*/
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%; /* 0%にすることでコンテナ全体を割合で分割することが出来る。 */
+   
+}
+#Kbus73{
+   background-color: azure;
+   order: 3;    /* orderの初期値は0 */
+   /* flex-basis: 200px;
+   flex-grow: 1; */
+   /* flex: 3; */
+}#Kbus168{
+   background-color: lawngreen;
+   order: 2;
+   /* flex-basis: 200px;
+   flex-grow: 1; */
+}#Kbus5{
+   background-color: teal;
+   order: 1;
+   /* flex-basis: 200px;
+   flex-grow: 1; */
+}
